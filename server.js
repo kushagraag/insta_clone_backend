@@ -5,6 +5,10 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+
+// Enable CORS for all routes
+app.use(cors());
+
 // Connect to MongoDB (replace YOUR_CONNECTION_STRING with your actual MongoDB connection string)
 mongoose.connect('mongodb+srv://kush:kush@insta-test.s5uur97.mongodb.net/testdb', { useNewUrlParser: true, useUnifiedTopology: true });
 
